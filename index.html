@@ -3,14 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="assests/css/output.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Splash&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assests/css/sytle.css">
         <title>cardapio online</title>
     </head>
     <body>
+        <div id="fade" class="hide">
+            <div id="loader2" class="spinner-border text-info hide" role="status">
+              <!-- <span class="visually-hidden">Loading...</span> -->
+            </div>
+        </div>
     <div class="preolader" id="preolader">
         <div class="loader" id="loader"></div> 
         <div id="sombra" class="sombra"></div>
@@ -32,71 +39,6 @@
     
     <section id="menu">
         <main id="hambuguers" class="grid gri-cols-1 md:grid-cols-2 gap-7 mx-auto max-w-7xl px-2 mb-2 md:gap-10">
-            <div class="flex gap-2">
-                <img src="img/hamb-1.png" alt="" srcset="" class="
-                w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300
-                ">
-                <div>
-                    <p class="font-bold">Smash</p>
-                    <p class="text-sm">Pão levinho de fermentação natural de Trigou, burguer 
-                        160g, queijo prato e maionese da casa
-                    </p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 35,00</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="smash" data-price="35.00"><i class="bi bi-cart text-white"></i></button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="flex gap-2">
-                <img src="img/hamb-1.png" alt="" srcset="" class="
-                w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300
-                ">
-                <div>
-                    <p class="font-bold">Smash</p>
-                    <p class="text-sm">Pão levinho de fermentação natural de Trigou, burguer 
-                        160g, queijo prato e maionese da casa
-                    </p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 36,00</p>
-                        <button  data-name="sei la" data-price="36.00"class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="bi bi-cart text-white"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex gap-2">
-                <img src="img/hamb-1.png" alt="" srcset="" class="
-                w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300
-                ">
-                <div>
-                    <p class="font-bold">Smash</p>
-                    <p class="text-sm">Pão levinho de fermentação natural de Trigou, burguer 
-                        160g, queijo prato e maionese da casa
-                    </p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 35,00</p>
-                        <button  data-name="vida louca" data-price="45.00"class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="bi bi-cart text-white"></i></button>
-                    </div>
-            </div>
-        </div>
-        <div class="flex gap-2">
-            <img src="img/hamb-1.png" alt="" srcset="" class="
-            w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300
-            ">
-            <div>
-                <p class="font-bold">Smash</p>
-                <p class="text-sm">Pão levinho de fermentação natural de Trigou, burguer 
-                    160g, queijo prato e maionese da casa
-                </p>
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$ 35,00</p>
-                    <button  data-name="bora biuo" data-price="500.00" class="bg-gray-900 px-5 rounded add-to-cart-btn" ><i class="bi bi-cart text-white"></i></button>
-                </div>
-            </div>
-        </div>
-        
-        
-        
     </main>
     
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">bebidas</h2>
@@ -117,23 +59,56 @@
         
         
     </main>
+
 </section>
+
 <section id="modal-cart" class="bg-black/50 w-full h-full fixed top-0 left-0 z-[90]  items-center justify-center hidden">
     <div class="bg-white p-5 rounded-md min-w-[90%] mid:min-w-[600px]">
         <h2 class="text-center text-2xl font-bold mb-2">Carrinho</h2>
         <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
         <p>Total : <span id="cart-total">0.00</span></p>
         <p class="font-bold mt-4">Endereço de Entrega</p>
-        <input type="text" name="Endereço" placeholder="Digite seu Endereço Completo.." id="address" class="w-full border-2 p-1 rounded my-1">
-        <p class="text-red-500 hidden " id="address-warn">Por favor preencher Campo</p>
+        
+        
         <div class="flex items-center justify-between mt-5 w-full">
             <button id="close-modal-btn">fechar</button>
             <button id="checkout-btn" class="bg-green-500 text-white px-4   py-1" >Finaliza pedido</button>
         </div>
     </div>
-    
-    
 </section>
+<section id="modal-cart-final" class="bg-black/50 w-full h-full fixed top-0 left-0 z-[90]  items-center justify-center hidden">
+    <div class="bg-white p-5 rounded-md min-w-[90%] mid:min-w-[600px]">
+        <h2 class="text-center text-2xl font-bold mb-2">CONFIRMAÇÃO DE PEDIDO</h2>
+        <div class="flex-1	 flex-col justify-center items-center	 ">
+            <h3 class="text-xl	font-bold">Forma de Pagamento</h3>
+            <label for="Dinheiro">Dinheiro</label>
+            <input type="radio" name="OPTION" value="Dinheiro" id="Dinheiro"><br>
+            <label for="Credito">Credito</label>
+            <input type="radio" name="OPTION" value="Credito" id="Credito"><br>
+            <label for="Debito">Debito</label>
+            <input type="radio" name="OPTION" value="Debito" id="Debito"><br>
+            <label for="Pix">Pix</label>
+            <input type="radio" name="OPTION" value="Pix" id="Pix"><br>
+        </div>
+        <div id="Endereço">
+    
+        <h2 class="text-xl	font-bold">Endereço da Entrega</h2>
+        <input type="text" name="cep" placeholder="Cep" id="address" class="w-full border-2 p-1 rounded my-1" maxlength="8">
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu cep</a>
+        <input type="text" name="Muncipio" placeholder="Muncipio" id="municipio" class="w-full border-2 p-1 rounded my-1">
+        <input type="text" name="Bairro" placeholder="Bairro" id="Bairro" class="w-full border-2 p-1 rounded my-1">
+        <input type="text" name="Rua/Avenida" placeholder="Rua/Avenida" id="Rua/Avenida" class="w-full border-2 p-1 rounded my-1">
+        <input type="text" name="Numero" placeholder="Numero" id="Numero" class="w-full border-2 p-1 rounded my-1">
+        <input type="text" name="Completo" placeholder="Ponto de Refenrencia" id="Completo" class="w-full border-2 p-1 rounded my-1">
+        </div>
+        <div class="flex items-center justify-between mt-5 w-full">
+            <button id="close-modal-btn2">fechar</button>
+            <button id="checkout-btn2" class="bg-green-500 text-white px-4   py-1" >Finaliza pedido</button>
+        </div>
+        <p class="text-red-500 hidden " id="address-warn">Por favor preencher Campo</p>
+    </div>
+</section>
+
 
 <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
     <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
@@ -145,6 +120,7 @@
 </footer>
 <script type="module" src="assests/js/load.js"></script>
 <script type="module" src="assests/js/script.js"></script>
+<script type="module" src="assests/js/inforDinamique.js"></script>
 </body>
 </html>
 

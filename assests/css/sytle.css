@@ -1,10 +1,6 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
 body{
     font-family: "Encode Sans Expanded", sans-serif;
-    font-weight: 200;
-    font-style: normal;
+
 }
 .preolader{
     position: fixed;
@@ -60,4 +56,39 @@ body{
         transform: rotate(360deg);
         opacity: 0;
     } 
-} */
+} 
+#checkout-page {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+  }
+  
+  /* Message */
+  #fade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+  
+  #fade .spinner-border {
+    width: 60px;
+    height: 60px;
+  }
+#loader2{
+    border: 20px solid rgb(246, 246, 246);
+    border-top: 20px solid rgb(0, 0, 0);
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; 
+
+
+}
+  

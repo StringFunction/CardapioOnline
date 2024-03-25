@@ -1,4 +1,2 @@
-remoer = () =>{
-    console.log('ola');
-}
-remoer()
+console.log('zero');
+ola =
