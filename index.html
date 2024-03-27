@@ -66,23 +66,23 @@
     <div class="bg-white p-5 rounded-md min-w-[90%] mid:min-w-[600px]">
         <h2 class="text-center text-2xl font-bold mb-2">Carrinho</h2>
         <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
-        <p>Total : <span id="cart-total">0.00</span></p>
-        <p class="font-bold mt-4">Endereço de Entrega</p>
-        
-        
+        <p><span class="font-bold">Total : </span><span id="cart-total">0.00</span></p>      
         <div class="flex items-center justify-between mt-5 w-full">
             <button id="close-modal-btn">fechar</button>
             <button id="checkout-btn" class="bg-green-500 text-white px-4   py-1" >Finaliza pedido</button>
         </div>
     </div>
 </section>
+
+<!-- SEÇÃO DO CARD PARA FINALIZAÇÃO DO PEDIDO  -->
 <section id="modal-cart-final" class="bg-black/50 w-full h-full fixed top-0 left-0 z-[90]  items-center justify-center hidden">
     <div class="bg-white p-5 rounded-md min-w-[90%] mid:min-w-[600px]">
         <h2 class="text-center text-2xl font-bold mb-2">CONFIRMAÇÃO DE PEDIDO</h2>
-        <div class="flex-1	 flex-col justify-center items-center	 ">
+        <div class="flex-1	 flex-col justify-center items-center" id="cart-forma-pag">
             <h3 class="text-xl	font-bold">Forma de Pagamento</h3>
             <label for="Dinheiro">Dinheiro</label>
             <input type="radio" name="OPTION" value="Dinheiro" id="Dinheiro"><br>
+            <input type="text" id="Troco" class="w-full border-2 p-1 rounded my-1 border-green-500 hidden" placeholder="Troco ?">
             <label for="Credito">Credito</label>
             <input type="radio" name="OPTION" value="Credito" id="Credito"><br>
             <label for="Debito">Debito</label>
@@ -107,6 +107,17 @@
         </div>
         <p class="text-red-500 hidden " id="address-warn">Por favor preencher Campo</p>
     </div>
+</section>
+
+<section id="card-ce-invalido" class="bg-black/50 w-full h-full fixed top-0 left-0 z-[90]  items-center justify-center hidden">
+    <div class="bg-white p-5 rounded-md min-w-[50%] mid:min-w-[600px] flex flex-col justify-between items-center gap-2" >
+        <h2>Cep Invalido!!!</h2>
+        <div class="mt-5 w-full flex justify-center">
+            <button id="close-modalCep-btn2" class="bg-red-500 text-white px-4   py-1">fechar</button>
+        </div>
+    </div>
+
+    
 </section>
 
 

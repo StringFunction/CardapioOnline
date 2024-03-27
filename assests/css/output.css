@@ -1905,6 +1905,11 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
+.border-green-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2619,98 +2624,67 @@ video {
   forced-color-adjust: none;
 }
 
+/*  
 body{
-  font-family: "Encode Sans Expanded", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
-
 .preolader{
-  position: fixed;
-  background: rgb(255, 253, 253);
-  z-index: 100;
-  height: 100%;
-  width: 100%;
-  animation: spinz 1.35s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: fixed;
-    top: 0px;
-    left: 45px;
-    
- 
-    
-    background-color: aliceblue;
-     */
+    position: fixed;
+  
+    background: rgb(255, 253, 253);
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    animation: spinz 1.35s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .loader{
-  border: 20px solid rgb(255, 255, 255);
-  border-top: 20px solid rgb(0, 0, 0);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    border: 20px solid rgb(255, 255, 255);
+    border-top: 20px solid rgb(0, 0, 0);
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; 
+
+
 }
 
 .sombra::before{
-  position: static;
-  content: "";
-  position: absolute;
-  top: 70%;
-  left: 550px;
-  z-index: 102;
-  background: #a3a3a3;
-  width: 20%;
-  height: 20%;
-  transform:  perspective(64px) rotateX(40deg) scale(1, 0.35);
-  filter: blur(25px);
-  opacity: 0.7;
-}
+    position: static;
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 550px;
+    z-index: 102;
+    background: #a3a3a3;
+    width: 20%;
+    height: 20%;
+    transform:  perspective(64px) rotateX(40deg) scale(1, 0.35);
+    filter: blur(25px);
+    opacity: 0.7;
+    
 
+}
 @keyframes spin{
-  /* 0%{
-        transform: rotate(0deg);
-        opacity: 1;
-    } */
 
-  50%{
-    transform: rotate(90deg);
-    opacity: 1;
-  }
-
-  75%{
-    opacity: 1;
-    transform: rotate(180deg);
-  }
-
-  100%{
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* @keyframes spinz{
-    0%{
+     50%{
+        transform: rotate(90deg);
         opacity: 1;
     }
+    75%{
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    } 
 } */
-
-/* border:  20px solid  rgb(206, 42, 42);
-border-right: 20px solid transparent;
-border-left: 20px solid transparent;
-border-bottom: 20px solid rgb(223, 4, 4);
-border-right-width: 10px;
-border-bottom-width: 10px;
-border-radius: 50%;
-width: 200px;
-height: 200px;
-animation: spin 1s linear infinite; 
-top: 50%;
-left: 50%;
-margin-top: -60px;
-margin-left: -60px; */
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -2757,6 +2731,10 @@ margin-left: -60px; */
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:font-bold:hover {
@@ -2808,5 +2786,4 @@ margin-left: -60px; */
       paint-order: markers;
     }
   }
-} 
-  
+}
